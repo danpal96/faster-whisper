@@ -1,0 +1,18 @@
+[workspace]
+authors = ["Daniel Esteban Palma Igor <daniel.palma.i@ug.uchile.cl>"]
+channels = ["conda-forge", "bioconda"]
+name = "audio"
+platforms = [{ platform = "linux-64", cuda = "12" }]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.14.7,<3.15"
+ipython = ">=9.17.1,<10"
+av = "<19"
+libcublas = ">=12.9.2.10,<13"
+
+[pypi-dependencies]
+faster-whisper = ">=1.2.1, <2"
+faster_whisper_cli = { path = "." }
