@@ -42,7 +42,9 @@ def main():
 
     print(f"Detected language: {info.language} ({info.language_probability:.2f})")
     for segment in segments:
-        print(f"[{segment.start:.2f}s -> {segment.end:.2f}s] {segment.text}")
+        print(
+            f"[{segment.start:.2f}s -> {segment.end:.2f}s] {segment.text}", flush=True
+        )
 
 
 if __name__ == "__main__":
